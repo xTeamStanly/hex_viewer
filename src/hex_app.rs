@@ -375,6 +375,12 @@ impl eframe::App for HexApp {
                         });
                 });
             });
+        } else {
+            CentralPanel::default().show(ctx, |ui| {
+                ui.centered_and_justified(|ui| {
+                    ui.heading("Drag & drop a file to open it");
+                });
+            });
         }
 
         self.toasts.show(ctx);
